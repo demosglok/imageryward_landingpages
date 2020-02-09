@@ -1,0 +1,208 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #fefefe;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+.header {
+    width: calc(80% - 100px);
+    height: 500px;
+    padding: 100px 100px 100px 20%;
+    background-position: center;
+    position: relative;
+}
+.header .background {
+    background-size: cover;
+    background-image: url(images/bg_photographer.jpg);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 1;
+}
+.header .background:after {
+    display: block;
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index:2;
+    background-color: black;
+    opacity: 0.5;
+}
+.header .haader_content {
+    position: absolute;
+    top: 150px;
+    left: 300px;
+    z-index: 3;
+}
+.header h1, .header h3 {
+    color: #fefefe;
+    text-shadow: 0px 0px 5px #606060;
+}
+.header h1 {
+    font-size: 45px;
+}
+.header h3 {
+    margin-left: 40px;
+    font-size: 25px;
+}
+.section {
+    margin: 50px 100px 0;
+}
+.suggestion {
+    font-size: 30px;
+
+}
+.services {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.service {
+    width: 20vw;
+    border: 1px solid #c0c0c0;
+    height: 420px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-bottom: none;
+}
+.service .img {
+    width: 100%;
+    height: 300px;
+    background-position: center;
+    background-size: cover;
+}
+#certificate {
+    background-image: url(images/certificate.jpg)
+}
+#search {
+    background-image: url(images/search.jpg)
+}
+#legal {
+    background-image: url(images/legal.jpg)
+}
+#watermark {
+    background-image: url(images/watermark1.png)
+}
+
+
+.service_description {
+    margin: 20px;
+    height: 70px;
+}
+.service_description button {
+    display: block;
+}
+.hidden_explanation {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    padding: 30px;
+    width: 700px;
+    box-sizing: border-box;
+    left: calc(50vw - 350px);
+    top: 10vh;
+    background: #303040;
+    opacity: 0.9;
+    border: 2px solid #7070e0;
+    color: white;
+    font-size: 16px;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px;
+    border: 2px solid #7070e0;
+    background: #3030c5;
+    color: white;
+    font-size: 20px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+a.button {
+    text-decoration: none;
+}
+.button.small_button {
+    padding: 5px;
+    font-size: 12px;
+}
+.company {
+    background-image: url(images/startup2.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    position: relative;
+    height: 665px;
+    margin: 50px 0;
+}
+.contactus_form {
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    padding: 30px;
+    background: #202020;
+    border: 2px solid #3030c5;
+    opacity: 0.9;
+    width: 500px;
+    border-radius: 3px;
+    color: #fefefe;
+    font-size: 20px;
+}
+.row {
+    margin-bottom: 20px;
+}
+.contactus_form label {
+    width: 30%;
+    margin-right: 20px;
+    display: inline-block;
+    font-size: 20px;
+}
+.contactus_form input, .contactus_form textarea {
+    width: 60%;
+    font-size: 16px;
+    color: #303040;
+    border: 2px solid #7070e0;
+    border-radius: 3px;
+    display: inline-block;
+    height: 30px;
+    padding: 3px;
+}
+.contactus_form textarea {
+    height: auto;
+}
+.contactus_form .subscribe_row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+}
+.contactus_form .subscribe_row input {
+    width: calc(100% - 150px);
+}
+
+.question_textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 30px;
+}
+.footer {
+    text-align: center;
+}
+.credits {
+    color: #808080;
+    text-align: center;
+}
+.centered {
+    text-align: center;
+}
