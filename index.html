@@ -7,6 +7,7 @@
         <meta name="theme-color" content="#000000"/>
         <!--link rel="manifest" href="/manifest.json"/-->
         <!--link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/-->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
         <title>We protect photos</title>
         <link href="main.css" rel="stylesheet">
     </head>
@@ -15,33 +16,72 @@
             <!-- header -->
             <div class="header">
                 <div class="background"></div>
-                <div class="haader_content">
+                <div class="header_content">
+                    <h1>We. Protect. Photos.</h1>
+                    <h3>Are you photographer?</h3>
+                    <h3>Are your photos used without permission?</h3>
+                    <h3>Profit loss due to unauthorized usage of your photos?</h3>
+                    <h3>Do you want to protect your copyright?</h3>
+                </div>
+                <div class="contactus_form_outer_frame"></div>
+                <div class="contactus_form">
+                    <a id="contactus_form"></a>
+                    <h2 id="form_header">Write us, ask for details or just subscribe for updates</h2>
+                    <h4 id="form_error" class="error"></h4>
+                    <form>
+                        <div class="row"><label>Name:</label><input type="text" name="name" placeholder="John Smith" id="form_name"/></div>
+                        <div class="row"><label>Contact:</label><input type="text" name="contact" placeholder="Email or phone or messenger" id="form_contact"/></div class="row">
+                        <div class="row"><label>Message:</label><textarea rows="3" name="comment" id="form_message"></textarea></div class="row">
+                        <div class="row"><label></label><button id="send_form_button" class="button">Contact us</button></div>
+                    </form>
+                </div>
+            </div>
+            <!-- benefits -->
+            <div class="benefits">
+                <div class="benefit_item">
+                    <h4><i class="icon-lock icon-large benefit-icon"></i> Copyright Registration</h4>
+                    <p>Register copyright for your works with us, fast and cheap</p>
+                </div>
+                <div class="benefit_item">
+                    <h4><i class="icon-search icon-large benefit-icon"></i> Constant Monitoring</h4>
+                    <p>Be notified once any of your photos appear in internet, photostocks or website</p>
+                </div>
+                <div class="benefit_item">
+                    <h4><i class="icon-legal icon-large benefit-icon"></i> Legal Advices</h4>
+                    <p>Get help from our legal advisers</p>
+                </div>
+            </div>
+            <!-- services blocks -->
+            <div class="services">
+                <div class="service_wrapper">
+                <div class="service">
+                    <img src="images/certificate.jpg" class="img">
+                    <!--
+                        <p>We aim to help you.</p>
+                        <p>We are ImageryWard team and <a href="https://we.protect.photos">We.Protect.Photos</a>.</p>
+                        <p>We provide set of tools for photographers to safeguard their photos online</p>
+
                     <h1>Are you photographer who earns on selling photos online?</h1>
                     <h3>Do you feel frustrated when seeing your photos being used without permission?</h3>
                     <h3>Do you experience profit loss due to unauthorized usage or reselling of your photos?</h3>
                     <h3>Do you want to know when your photo appears on internet?</h3>
                     <h3>Do you want to register your ownership of yet unpublished photos fast and reliable?</h3>
-                    <a href="#contactus_form" class="button">Contact us</a>
-                    </div>
-            </div>
-            <!-- suggestion -->
-            <div class="suggestion section">
-                <p>We aim to help you.</p>
-                <p>We are ImageryWard team and <a href="https://we.protect.photos">We.Protect.Photos</a>.</p>
-                <p>We provide set of tools for photographers to safeguard their photos online</p>
-            </div>
-            <!-- services blocks -->
-            <div class="services section">
-                <div class="service">
-                    <div class="img" id="certificate"></div>
+
+                    -->
                     <div class="service_description">
-                        Hassle-free registration of ownership using DLT technology
-                    </div>
-                    <button class="button">How it works</button>
-                    <div class="hidden_explanation">
-                        <p>Distributed Ledger Technology (DLT) is way to store information in tamper proof way with exact unchangable timestamp in popular distributed ledgers:
-                            bitbocin blockchain, ethereum blockchain or private blockchains (distributed ledgers).
+                         <h2>Hassle-free registration of ownership using DLT technology</h2>
+                         <p>Distributed Ledger Technology (DLT) is way to store information in tamper proof way with exact unchangable timestamp in popular distributed ledgers:
+                            bitcoin blockchain, ethereum blockchain or private blockchains (distributed ledgers).<br/>
+                            First digital fingerprint called "hash" is created from your image<br/>
+                            This fingerprint is long sting 64 bytes long which identifies image uniquely<br/>
+                            It is stored in blockchain with your name and signature and tamperproof timestamp obtained in return<br/>
+                            Digital fingerprint plus signature plus timestamp proves your authorship. <br/>
+                            All these are prepared as <b>certificate</b> you can download and use to prove your authorship.
                         </p>
+                        <p>You can <a href="#contactus_form">ask more deatils from us</a> </p>
+                        <!--button class="button">Details</button-->
+                    </div>
+                    <div class="hidden_explanation">
                         <p>First digital fingerprints is created from your image. Then they are stored on most popular blockchains: bitcoin blockchain, ethereum blockchain,
                         and in our private database. Two fingerprints are created. First allows to identify your image uniquely and second is for searching
                         for similar images. Once you have your unique image identifier, it is stored on blockchain together with your name and your digital signature.
@@ -66,114 +106,101 @@
                         <button class="button small_button">Close</button>
                     </div>
                 </div>
-                <div class="service">
-                    <div class="img" id="search"></div>
+            </div>
+            <div class="service_wrapper">
+                <div class="service reversed">
+                    <img class="img" id="search" src="images/search.jpg"/>
                     <div class="service_description">
-                        Automatic monitoring for photo appearance on major photostocks and other internet sites
-                    </div>
-                    <button class="button">How it works</button>
-                    <div class="hidden_explanation">
-                        <p>Our service constantly runs checks using other well-known services like google image search as well as our own robot to check
-                            if any of your images appeared on some photo-sharing site, photostock or other site in internet
-                        </p>
-                        <p>In case we found such image appearance, we notify you so you can decide if it is legitimate usage or not.</p>
-                        <o>If its legitimate, we save it in our database and don't bother you again</o>
-                        <p>In case it is not, you can file up a takedown notice to the site with request to remove infrigement and providing our certificate</p>
-                        <p>We can help with creating such notice and now we're working on providing more legal support</p>
-                    </div>
-                </div>
-                <div class="service">
-                    <div class="img" id="legal"></div>
-                    <div class="service_description">
-                        Legal assistance in writing takedown notices and claiming your ownership over published photo (coming soon)
-                    </div>
-                    <button class="button">How it works</button>
-                    <div class="hidden_explanation">
-                        <p>As mentioned in previous explanation (see the one for automonitoring), once we (or you yourself) detect that image has appeared
-                            on some site in internet and its not legitimate usage, you can send so-called "takedown notice" to site owner with request to
-                            remove infiging photo. You can use certificate we produce for your image as evidence of your ownership. We help with filling such
-                            takedown notices (and working on making this semi-automatic) and also we'll have ability to provide legal support shortly through our partners
-                        </p>
-                    </div>
-                </div>
-                <div class="service">
-                    <div class="img" id="watermark"></div>
-                    <div class="service_description">
-                        Add visible on invisible watermark to your image for additional protection before publishing (coming soon)
-                    </div>
-                    <button class="button">How it works</button>
-                    <div class="hidden_explanation">
-                        <p>
-                            Usual way to protect photo from illegal copying and insert ownership information into photo itstself is watermarking.
-                        </p>
-                        <p>Watermarks which small changes in photo could be visible like your name in the corner. They can also be invisible and even withstand some
-                            image modifications. So when checked with special tool, it reveals your copyright or your ownership or your authorship over a photo
-                        </p>
-                        <p>We're now working on developing tools for creating both, visible and invisible watermarks</p>
+                        <h2>Regular monitoring  </h2>
+                        <p>Our service constantly runs checks
+                            if any of your images has appeared on some photo-sharing sites, photostocks or websites <br/>
+
+                        In case we found such appearance, we notify you so you can decide if it is legitimate usage or not.<br/>
+                        If its legitimate, we save it in our database and don't bother you again<br/>
+                        In case it is not, you can file up a takedown notice with request to remove infrigement and providing our certificate<br/>
+                        We can help with creating such notice and now we're working on providing more legal support</p>
                     </div>
                 </div>
             </div>
-            <!-- contact us form -->
-            <div class="company">
-                <div class="contactus_form">
-                    <a id="contactus_form"></a>
-                    <form>
-                        <div class="row"><label>Name:</label><input type="text" name="name" placeholder="John Smith"/></div>
-                        <div class="row"><label>Contact:</label><input type="text" name="contact" placeholder="Email or phone or messenger" /></div class="row">
-                        <div class="row"><label>Comment</label><textarea rows="3" name="comment"></textarea></div class="row">
-                        <div class="row"><label></label><button id="button" class="button">Contact us</button></div>
-                    </form>
-                    <div class="row centered">OR</div>
-                    <div class="row">
-                        Contact us with social networks
-                        <button>facebook</button><button>google</button>
-                        OR  messengers
+            <div class="service_wrapper">
+                <div class="service">
+                    <img class="img" id="legal" src="images/legal.jpg"/>
+                    <div class="service_description">
+                        <h2>Legal assistance</h2>
+                        <p>Once our service detect that your image has appeared
+                            on some site in internet and its not legitimate usage, you can send so-called "takedown notice" to site owner with request to
+                            remove infriging photo. You can use certificate we produce for your image as evidence of your ownership. We help with filling such
+                            takedown notices (and working on making this semi-automatic) and also we have a  ability to provide legal support through our partners
+                        </p>
                     </div>
-                    <div class="row centered">OR</div>
-                    <div class="row">Subscribe for updates</div>
-                    <div class="row subscribe_row">
-                        <input type="text" name="email" placeholder="youremail@domain.com"/>
-                        <button id="subscribe_button" class="button">Subscribe</button>
+                </div>
+            </div>
+            <div class="service_wrapper">
+                <div class="service reversed">
+                    <img class="img" id="watermark" src="images/watermark1.png"/>
+                    <div class="service_description">
+                        <h2>Watermarking</h2>
+                        <p>Add visible on invisible watermark to your image for additional protection before publishing (coming soon)</p>
+
+                        <p>Watermarks are small changes to your photo. They could be visible like your name in the corner. They can also be invisible and even withstand some
+                            image modifications. So when checked with special tool, it reveals your copyright and authorship over a photo
+                        </p>
+                        <p>We're working now on tools for creating both, visible and invisible watermarks</p>
                     </div>
 
-                </div>
-            </div>
-            <div class="faq section">
-                <h1>Frequently asked questions</h1>
-                <div class="question">
-                    <h4>If you service already working?</h4>
-                    <p>We have several tools. Registering with DLT and automonitoring for photo appearance on internet are working.
-                        Watermarking and legal support are being worked on to become available soon</p>
-                </div>
-                <div class="question">
-                    <h4>I want to use your service, how could I do it?</h4>
-                    <p>We kindly as to contact us via any conveniet way (email, phone, messenger) so we can make small demo for you</p>
-                </div>
-                <div class="question">
-                    <h4>Is your certificate of image authorship registration recognized by major legal entities, can I use it in court?</h4>
-                    <p>It heavile depends on country and jurisdictions you're in. We're happy to provide more info on request</p>
-                </div>
-                <div class="question">
-                    <h4>How fast will my image be detected once someone put it on some site?</h4>
-                    <p>It depends on many conditions, including how popular site is where photo was published. It could take from 1 day to week.
-                        Of course we're working on speeding up this process
-                    </p>
-                </div>
-                <div class="question">
-                    <h4>I have some special requirements, can we discuss them?</h4>
-                    <p>Yes, of course. Contact us, send us email, drop a message and we'll happily answer and discuss your requirements</p>
-                </div>
-                <div class="question">
-                    <h4>Ask your question so we can add it here</h4>
-                    <div>
-                        <textarea id="newquestion" rows="5" class="question_textarea"></textarea>
-                        <button id="asquestion" class="button">Ask question</button>
+                    <div class="hidden_explanation">
                     </div>
                 </div>
             </div>
         </div>
-        <div class="footer">(c) ImageryWard 2020</div>
-        <div class="credits">Images used on this page: by Ailbhe Flynn on Unsplash, by Eftakher Alam on Unsplash, by Agung Pandit Wiguna from Pexels</div>
+        <div class="faq section">
+            <h1>Popular questions</h1>
+            <div class="question">
+                <h4>Who we are?</h4>
+                <p>We're small startup developing tools for image protection.
+                    Our goal is to allow image creators like photographers, designers and digital artists detect and fight infrigements
+                </p>
+            </div>
+            <div class="question">
+                <h4>Is you service live?</h4>
+                <p>We have several tools. Registering with DLT and regular monitoring are ready.
+                    Watermarking and legal support will come up shortly</p>
+            </div>
+            <div class="question">
+                <h4>I want to use your service, how could I do it?</h4>
+                <p>We kindly ask to contact us via any convenient way (email, phone, messenger) so we can make small demo for you</p>
+            </div>
+            <div class="question">
+                <h4>Can I use your certificate in court?</h4>
+                <p>It depends on country and jurisdictions you're in. We're happy to provide more info on request. We're optimistic about
+                    legal recognition and have lawyers who are ready to support you. Its worth mentioning that in most cases you'll not need to
+                    go to the court as infringements are removed when you provide enough evidence of your authorship.
+                </p>
+            </div>
+            <div class="question">
+                <h4>How fast will my image be detected once someone put it on some site?</h4>
+                <p>Usually it takes few days. It depends on many conditions, including how popular site is where photo was published, so it could take from 1 day to 1 week.
+                    Of course we're working on speeding up this process
+                </p>
+            </div>
+            <div class="question">
+                <h4>What if someone will register my image on your service before I do?</h4>
+                <p>We check images for originality and uniquiness, however you'll still have all other old-good evidences of your authorship
+                    and you can contact with us to resolve the dispute if any. We're very open.
+                </p>
+            </div>
+            <div class="question">
+                <h4>I have some special requirements, can we discuss them?</h4>
+                <p>Yes, of course. <a href="#contactus_form">Contact us</a> and we'll be happy to discuss your requirements</p>
+            </div>
+        </div>        <div class="section white discount">
+            <div class="discount_inner">
+                <h2>Hey, you read up to the end. <span class="widescreen">We didn't expect this:)</span></h2>
+                <p> <a href="#contactus_form">Write us</a> with "I want discount" words anywhere in the message and get 50% discount for first year.</p>
+                <div class="footer">(c) ImageryWard 2020</div>
+                <div class="credits">Images used on this page: by Ailbhe Flynn on Unsplash, by Eftakher Alam on Unsplash, by Agung Pandit Wiguna from Pexels</div>
+            </div>
+        </div>
         <script src="main.js"></script>
     </body>
 </html>
