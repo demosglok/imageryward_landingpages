@@ -7,6 +7,7 @@ window.addEventListener('load', () => {
             name: document.getElementById('form_name')?.value,
             contact: document.getElementById('form_contact')?.value,
             message: document.getElementById('form_message')?.value
+            origin: 'photo'
         }
         fetch('/contact', {
             method: 'POST',
