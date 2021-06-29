@@ -1,4 +1,4 @@
-
+const url = 'https://we.protect.photos';
 window.addEventListener('load', () => {
     const submit_button = document.getElementById('send_form_button');
     submit_button.addEventListener('click', (e) => {
@@ -6,10 +6,10 @@ window.addEventListener('load', () => {
         const data = {
             name: document.getElementById('form_name')?.value,
             contact: document.getElementById('form_contact')?.value,
-            message: document.getElementById('form_message')?.value
-            origin: 'photo'
+            message: document.getElementById('form_message')?.value,
+            origin: 'photos'
         }
-        fetch('/contact', {
+        fetch(`${url}/contact`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

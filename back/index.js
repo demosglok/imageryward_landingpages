@@ -19,7 +19,9 @@ let answers = [];
 
 app.post('/contact', (req, res) => {
     const request = req.body;
-    answers.push(request);
+    if(JSON.stringify(request).length < 10000) {
+	answers.push(request);
+    }
     res.json({success: true});
 });
 
