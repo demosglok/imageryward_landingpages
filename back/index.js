@@ -16,27 +16,66 @@ app.use(bodyParser.json());
 app.use(express.static(__dirname + '/public'));
 
 let answers = [];
+let contactus = [];
+let earlyaccess = [];
 
+const MAX_MEMORY_LENGTH = 20;
 app.post('/contact', (req, res) => {
-    const request = req.body;
-    if(JSON.stringify(request).length < 10000) {
+    if(answers.length > MAX_MEMORY_LENGTH) {
+	res.json({success: false});
+    } else {
+	const request = req.body;
 	answers.push(request);
+	res.json({success: true});
     }
-    res.json({success: true});
 });
-
+app.post('/contactus', (req, res) => {
+    if(contactus.length > MAX_MEMORY_LENGTH) {
+	res.json({success: false});
+    } else {
+	const request = req.body;
+	contactus.push(request);
+	res.json({success: true});
+    }
+});
+app.post('/earlyaccess', (req, res) => {
+    if(earlyaccess.length > MAX_MEMORY_LENGTH) {
+	res.json({success: false});
+    } else {
+	const request = req.body;
+	earlyaccess.push(request);
+	res.json({success: true});
+    }
+});
 setInterval(() => {
     if(answers.length > 0) {
-        console.log('saving answers');
         try {
             const str = answers.map(el => JSON.stringify(el)).join(",\n") + ",\n";
-            fs.appendFileSync('data.json',str);
+            fs.appendFileSync('old_contact.json',str);
             answers = [];
         }catch(e) {
-            console.log('error saving to file', e.message);
+            console.log('error saving answers to file', e.message);
         }
     }
-}, 2000);
+    if(contactus.length > 0) {
+        try {
+            const str = contactus.map(el => JSON.stringify(el)).join(",\n") + ",\n";
+            fs.appendFileSync('contactus.json',str);
+            contactus = [];
+        }catch(e) {
+            console.log('error saving contactus to file', e.message);
+        }
+    }
+    if(earlyaccess.length > 0) {
+        try {
+            const str = earlyaccess.map(el => JSON.stringify(el)).join(",\n") + ",\n";
+            fs.appendFileSync('earlyaccess.json',str);
+            earlyaccess = [];
+        }catch(e) {
+            console.log('error saving answers to file', e.message);
+        }
+    }
+}, 5000);
 app.listen(port, () => {
  console.log(`Server running on port ${port}`);
 });
