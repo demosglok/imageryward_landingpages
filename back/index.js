@@ -20,11 +20,15 @@ let contactus = [];
 let earlyaccess = [];
 
 const MAX_MEMORY_LENGTH = 20;
+function getip(req) {
+    return req.headers['x-forwarded-for'];
+}
 app.post('/contact', (req, res) => {
     if(answers.length > MAX_MEMORY_LENGTH) {
 	res.json({success: false});
     } else {
 	const request = req.body;
+	request.ip = getip(req);
 	answers.push(request);
 	res.json({success: true});
     }
@@ -34,6 +38,7 @@ app.post('/contactus', (req, res) => {
 	res.json({success: false});
     } else {
 	const request = req.body;
+	request.ip = getip(req);
 	contactus.push(request);
 	res.json({success: true});
     }
@@ -43,6 +48,7 @@ app.post('/earlyaccess', (req, res) => {
 	res.json({success: false});
     } else {
 	const request = req.body;
+	request.ip = getip(req);
 	earlyaccess.push(request);
 	res.json({success: true});
     }
